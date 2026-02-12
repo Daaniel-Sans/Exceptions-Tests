@@ -8,20 +8,17 @@ public class Main {
 
         try {
             System.out.print("Introduce un primer número (dividendo): ");
-            double num1 = scanner.nextDouble();
-            System.out.print("Introduce un segundo número (divisor): ");
-            double num2 = scanner.nextDouble();
+            int n1 = scanner.nextInt();
+            System.out.print("Introduce un primer número (divisor): ");
+            int n2 = scanner.nextInt();
+            int resultado = n1 / n2;
+            System.out.println("Resultado: " + resultado);
 
-            if (num2 == 0) {
-                System.out.println("Haz el favor de no dividir por cero ¬¬");
-            } else {
-                double resultado = num1 / num2;
-                System.out.println("El resultado es: " + resultado);
+            } catch (InputMismatchException e) {
+            System.out.println("Debes introducir un número entero");
+            } catch (ArithmeticException e) {
+            System.out.println("No se puede dividir por 0");
             }
 
-        } catch (InputMismatchException e) {
-
-            System.out.println("Error: No has introducido números válidos U.U");
-        }
     }
 }
