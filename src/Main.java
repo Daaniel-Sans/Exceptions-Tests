@@ -14,11 +14,11 @@ public class Main {
             int resultado = n1 / n2;
             System.out.println("Resultado: " + resultado);
 
-            } catch (InputMismatchException e) {
+        } catch (InputMismatchException e) {
             System.out.println("Debes introducir un número entero");
-            } catch (ArithmeticException e) {
+        } catch (ArithmeticException e) {
             System.out.println("No se puede dividir por 0");
-            }
+        }
 
     }
 }
